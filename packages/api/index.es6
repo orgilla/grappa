@@ -8,7 +8,13 @@ const combine = plugins => async props => {
   return contexts.reduce((store, item) => Object.assign(store, item || {}), {});
 };
 
-export default ({ typeDefs = '', resolvers = {}, context, plugins = [] }) => {
+export default ({
+  typeDefs = '',
+  resolvers = {},
+  context,
+  plugins = [],
+  fieldResolver
+}) => {
   let lambda;
   plugins = [{ context, typeDefs, resolvers }, ...plugins];
   try {
@@ -24,6 +30,7 @@ export default ({ typeDefs = '', resolvers = {}, context, plugins = [] }) => {
     );
     context = combine(plugins);
     lambda = new GraphQLServerLambda({
+      fieldResolver,
       typeDefs,
       resolvers,
       options: {
