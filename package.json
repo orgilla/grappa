@@ -1,0 +1,46 @@
+{
+  "private": true,
+  "workspaces": ["packages/*"],
+  "version": "0.9.0",
+  "name": "grappa",
+  "description": "",
+  "scripts": {
+    "test": "jest",
+    "watch": "alpacka watch -c babel-react",
+    "codecov": "codecov",
+    "up": "yarn upgrade-interactive --latest",
+    "init": "lerna init --independent",
+    "lb": "lerna bootstrap",
+    "lp": "lerna publish --access public",
+    "lpf": "lerna publish --force-publish --access public",
+    "lc": "lerna exec --concurrency 1 -- del 'package-lock.json' 'node_modules'"
+  },
+  "engines": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bkniffler/grappa.git"
+  },
+  "keywords": ["react", "universal", "javascript", "express", "webpack"],
+  "author": "Benjamin Kniffler <bkniffler@me.com>",
+  "contributors": [
+    "Benjamin Kniffler <bkniffler@me.com>",
+    "Philipp Achenbach <grappa@philipp-achenbach.de>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bkniffler/grappa/issues"
+  },
+  "homepage": "https://github.com/bkniffler/grappa#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@alpacka/cli": "^0.9.19",
+    "@alpacka/eslint-config": "^0.9.12",
+    "@alpacka/plugin-babel-react": "^0.9.14",
+    "jest": "^22.3.0",
+    "lerna": "^2.9.0"
+  },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
+  }
+}
