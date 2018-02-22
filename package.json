@@ -12,8 +12,7 @@
     "init": "lerna init --independent",
     "lb": "lerna bootstrap",
     "lp": "lerna publish --access public",
-    "lp2": "lerna publish --access public",
-    "lpf": "lerna exec --concurrency 1 -- npm publish --access public",
+    "lpf": "lerna publish --force-publish --access public",
     "lc": "lerna exec --concurrency 1 -- del 'package-lock.json' 'node_modules'"
   },
   "engines": {},
