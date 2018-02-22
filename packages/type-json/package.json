@@ -1,9 +1,8 @@
 {
-  "version": "20.2.13",
+  "version": "0.9.1",
   "name": "@grappa/type-json",
   "main": "./index.js",
   "description": "",
   "author": "Benjamin Kniffler <bkniffler@me.com>",
-  "license": "MIT",
-  "dependencies": {}
+  "license": "MIT"
 }

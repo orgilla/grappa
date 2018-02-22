@@ -1,12 +1,12 @@
 {
-  "version": "20.2.13",
+  "version": "0.9.1",
   "name": "@grappa/mongodb",
   "main": "./index.js",
   "description": "",
   "author": "Benjamin Kniffler <bkniffler@me.com>",
   "license": "MIT",
   "dependencies": {
-    "mongodb": "^3.0.2",
-    "hashids": "^1.1.4"
+    "hashids": "^1.1.4",
+    "mongodb": "^3.0.2"
   }
 }
