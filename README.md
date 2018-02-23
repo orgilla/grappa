@@ -42,7 +42,9 @@ An easy GraphQL API composer with plugins. It uses graphql-yoga under the hood.
 ## Kickstart
 
 ```bash
-npm i @grappa/api @grappa/mongodb
+npm i @grappa/api
+# More
+npm i @grappa/mongodb @grappa/auth0 @grappa/type-date @grappa/type-json
 ```
 
 ```jsx
@@ -87,6 +89,8 @@ const client = api({
     }),
   ],
 });
+
+export const { playground, server, voyager } = client;
 ```
 
 ## Plugins
