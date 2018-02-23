@@ -45,6 +45,50 @@ An easy GraphQL API composer with plugins. It uses graphql-yoga under the hood.
 npm i @grappa/api @grappa/mongodb
 ```
 
+```jsx
+import api from '@grappa/api';
+import createAuth0 from '@grappa/auth0';
+import createTypeJSON from '@grappa/type-json';
+import createTypeDate from '@grappa/type-date';
+import createMongoDB from '@grappa/mongodb';
+
+const client = api({
+  typeDefs: `
+    type User {
+      id: ID!
+      name: String
+    }
+    type Query {
+      user(id: ID): String
+      endpoint(id: ID): String
+    }
+  `,
+  resolvers: {
+    Query: {
+      // Get user with auth0
+      user: (parent, args, { getUser }) => getUser(),
+      // Find item by id
+      endpoint: (parent, { id }, { find }) => find('collection1', id),
+    },
+  },
+  plugins: [
+    createAuth0({
+      managementClientId: process.env.AUTH0_MANAGEMENT_CLIENT_ID,
+      managementClientSecret: process.env.AUTH0_MANAGEMENT_CLIENT_SECRET,
+      managementClientAudience: process.env.AUTH0_MANAGEMENT_CLIENT_AUDIENCE,
+      domain: process.env.AUTH0_DOMAIN,
+      audience: process.env.AUTH0_AUDIENCE,
+    }),
+    createTypeDate(),
+    createTypeJSON(),
+    createMongoDB({
+      uri: process.env.MONGODB_URI,
+      hash: process.env.MONGODB_URI,
+    }),
+  ],
+});
+```
+
 ## Plugins
 
 ### Databases
@@ -59,8 +103,6 @@ npm i @grappa/api @grappa/mongodb
 
 * [@grappa/type-date](https://github.com/bkniffler/grappa/tree/master/packages/type-date): Date/DateTime types
 * [@grappa/type-json](https://github.com/bkniffler/grappa/tree/master/packages/type-json): Json type
-
-For help, use `grappa --help`
 
 ## Motivation
 
