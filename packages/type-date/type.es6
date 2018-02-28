@@ -1,5 +1,4 @@
 import { GraphQLScalarType } from 'graphql';
-import { ObjectID } from 'mongodb';
 import { Kind } from 'graphql/language';
 
 export default new GraphQLScalarType({
