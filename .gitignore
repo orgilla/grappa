@@ -37,3 +37,5 @@ flow-typed/
 
 # Flow Coverage Report
 flow-coverage/
+
+packages/**/*.js
