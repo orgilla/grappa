@@ -1,6 +1,8 @@
 {
   "private": true,
-  "workspaces": ["packages/*"],
+  "workspaces": [
+    "packages/*"
+  ],
   "version": "0.9.0",
   "name": "grappa",
   "description": "",
@@ -20,7 +22,13 @@
     "type": "git",
     "url": "https://github.com/bkniffler/grappa.git"
   },
-  "keywords": ["react", "universal", "javascript", "express", "webpack"],
+  "keywords": [
+    "react",
+    "universal",
+    "javascript",
+    "express",
+    "webpack"
+  ],
   "author": "Benjamin Kniffler <bkniffler@me.com>",
   "contributors": [
     "Benjamin Kniffler <bkniffler@me.com>",
@@ -33,10 +41,10 @@
   "homepage": "https://github.com/bkniffler/grappa#readme",
   "dependencies": {},
   "devDependencies": {
-    "@alpacka/cli": "^0.9.19",
-    "@alpacka/eslint-config": "^0.9.12",
-    "@alpacka/plugin-babel-react": "^0.9.14",
-    "jest": "^22.3.0",
+    "@alpacka/cli": "^0.12.3",
+    "@alpacka/eslint-config": "^0.12.0",
+    "@alpacka/plugin-babel-react": "^0.12.3",
+    "jest": "^22.4.2",
     "lerna": "^2.9.0"
   },
   "jest": {

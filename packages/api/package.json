@@ -6,6 +6,6 @@
   "author": "Benjamin Kniffler <bkniffler@me.com>",
   "license": "MIT",
   "dependencies": {
-    "graphql-yoga": "^1.3.2"
+    "graphql-yoga": "^1.6.0"
   }
 }
