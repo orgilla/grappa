@@ -43,7 +43,7 @@
   "devDependencies": {
     "@alpacka/cli": "^0.12.3",
     "@alpacka/eslint-config": "^0.12.0",
-    "@alpacka/plugin-babel-react": "^0.12.3",
+    "@alpacka/plugin-babel-react": "^0.12.4",
     "jest": "^22.4.2",
     "lerna": "^2.9.0"
   },

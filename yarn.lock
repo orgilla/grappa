@@ -56,9 +56,9 @@
     eslint-plugin-prettier "^2.6.0"
     eslint-plugin-react "^7.6.1"
 
-"@alpacka/plugin-babel-react@^0.12.3":
-  version "0.12.3"
-  resolved "https://registry.npmjs.org/@alpacka/plugin-babel-react/-/plugin-babel-react-0.12.3.tgz#c85f28973ebff9c7b57e733ef8f6ee0a1cd61aac"
+"@alpacka/plugin-babel-react@^0.12.4":
+  version "0.12.4"
+  resolved "https://registry.npmjs.org/@alpacka/plugin-babel-react/-/plugin-babel-react-0.12.4.tgz#9060afcbbebb6a5e7305f006d19d74f4b4899e3c"
   dependencies:
     "@alpacka/babel-preset" "^0.12.3"
     "@babel/polyfill" "^7.0.0-beta.41"
